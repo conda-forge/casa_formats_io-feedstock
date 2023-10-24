@@ -1,5 +1,5 @@
 {% set name = "casa_formats_io" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/casa-formats-io-{{ version }}.tar.gz
-  sha256: f2267ec1c49f8790024dbdff89001fdaa429c19eb01315b071d2682e60848c1d
+  sha256: 10e5feb5a97d9eb38dd8aee61d56124d3c636ba9aeda4dc16a0f1b84bdc91c9b
 
 build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
