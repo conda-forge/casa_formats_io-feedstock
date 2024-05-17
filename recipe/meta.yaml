@@ -12,11 +12,12 @@ source:
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - setuptools
@@ -28,7 +29,6 @@ requirements:
     - python
     - astropy >=4.0
     - dask-core >=2.0
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
