@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python
-    - astropy >=4.0
+    - astropy-base >=4.0
     - dask-core >=2.0
 
 test:
